@@ -9,7 +9,6 @@ def rectangle():
 	width,length  =(raw_input("Enter Width: ")), (raw_input("Enter Length: "))
 	if width.isdigit() and length.isdigit():
 		r= multiplier(width,length,length)
-		print r
 		return r
 	else:
 		print "Please enter a number"
@@ -19,7 +18,6 @@ def square():
 	side = (raw_input("Enter side: "))
 	if side.isdigit():
 		s= multiplier(side,side,side)
-		print s
 		return s
 	else:
 		print "Please enter a number"
@@ -29,7 +27,6 @@ def triangle():
 	base, height= raw_input("Enter Base: "),raw_input("Enter Height: ")
 	if base.isdigit() and height.isdigit():
 		t= multiplier(multiplier(base,height,height),0.5,0.5)
-		print t
 		return t
 	else:
 		print "Please enter a number"
@@ -39,7 +36,6 @@ def circle():
 	rad = (raw_input("Enter radius: "))
 	if rad.isdigit():	
 		c= multiplier(multiplier(rad,rad,rad),pi,pi)
-		print	c
 		return c
 	else:
 		print "Please enter a number"
@@ -53,8 +49,7 @@ t= triangle()
 
 maxx = max(float(r),float(s),float(c),float(t))
 guess = raw_input("Enter guess SHAPE: ")
-	
-		
+			
 def guessy(corAns,guess):
 	if corAns == guess.lower():
 		print "Correct!!!"			
@@ -75,6 +70,7 @@ def dictionary(maxx,t,c,r,s,guess):
 	elif maxx == s:
 		corAns = "square"
 		guessy(corAns,guess)
+dictionary(maxx,t,c,r,s,guess)
 
 
 
